@@ -1,10 +1,13 @@
 # Redmine Resque plugin
 
+[![Build Status](https://travis-ci.org/Undev/redmine_resque.png?branch=master)](https://travis-ci.org/Undev/redmine_resque)
+[![Code Climate](https://codeclimate.com/github/Undev/redmine_resque.png)](https://codeclimate.com/github/Undev/redmine_resque)
+
 Adding "resque" gem and mount Resque front-end on a subpath "/resque".
 
 ## Description
 
-Link at the top menu allows administrator see what's up with your queue. 
+Link at the top menu allows administrator see what's up with your queue.
 
 ## Requirements
 
