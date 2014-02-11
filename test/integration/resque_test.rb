@@ -10,7 +10,7 @@ class ResqueTest < ActionController::IntegrationTest
   def test_admin_can_open_resque_ui
     log_user('admin', 'admin')
     get '/resque'
-    assert_response :success
+    assert_response 302
   end
 
   def test_user_cannot_open_resque_ui
