@@ -25,7 +25,7 @@ you can do so by changing into your REDMINE_ROOT directory and issuing a command
 2. Restart Redmine
 3. Run resque worker from REDMINE_ROOT directory
 
-        bundle exec rake environment resque:work QUEUE=* RAILS_ENV=production
+        bundle exec rake resque:work RAILS_ENV=production QUEUE=*
 
 ## Links
 
