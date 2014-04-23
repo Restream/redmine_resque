@@ -1,6 +1,6 @@
 require 'redmine'
 
-Resque.redis.namespace = 'redmine_resque'
+Resque.redis.namespace = "#{Rails.application.class.parent_name.downcase}_#{Rails.env}"
 
 ActionDispatch::Callbacks.to_prepare do
   require 'redmine_resque'
@@ -10,7 +10,7 @@ Redmine::Plugin.register :redmine_resque do
   name        'Resque for Redmine'
   description 'Background jobs for Redmine'
   author      'Undev'
-  version     '0.0.2'
+  version     '0.0.3'
   url         'https://github.com/Undev/redmine_resque'
 
   requires_redmine :version_or_higher => '2.1'
