@@ -38,7 +38,7 @@ you can do so by changing into your REDMINE_ROOT directory and issuing a command
 
         nano config/worker_schedule.yml
 
-2. Add any of the items below to the schedule:
+2. Add any of following configuration sections to your schedule.
 
 #### Mail reading
 
