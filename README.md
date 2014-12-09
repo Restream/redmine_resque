@@ -59,7 +59,7 @@ The parameters for this job is exactly the same as the normal Redmine rake task 
 
 ## Ubuntu/Debian upstart job
 
-1. Copy the upstart config files to system directory:
+1. Copy the example upstart config files provided by this plugin to system directory:
 
         cp script/redmine_*.conf /etc/init
 
