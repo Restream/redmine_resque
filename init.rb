@@ -15,5 +15,5 @@ Redmine::Plugin.register :redmine_resque do
 
   requires_redmine :version_or_higher => '2.1'
 
-  menu :top_menu, 'Resque', '/resque', :if => Proc.new { User.current.admin? }
+  menu :top_menu, 'Resque', 'resque', :if => Proc.new { User.current.admin? }
 end
