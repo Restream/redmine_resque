@@ -24,11 +24,11 @@ you can do so by changing into your REDMINE_ROOT directory and issuing a command
 
 2. Restart Redmine.
 
-3. Run resque worker from REDMINE_ROOT directory or use a [Ubuntu/Debian upstart job](#ubuntu/debian-upstart-job).
+3. Run resque worker from REDMINE_ROOT directory or use a [Ubuntu/Debian upstart job](#ubuntudebian-upstart-job).
 
         bundle exec rake resque:work RAILS_ENV=production QUEUE=*
         
-4. Run resque scheduler from REDMINE_ROOT directory or use a [Ubuntu/Debian upstart job](#ubuntu/debian-upstart-job).
+4. Run resque scheduler from REDMINE_ROOT directory or use a [Ubuntu/Debian upstart job](#ubuntudebian-upstart-job).
 
         bundle exec rake resque:scheduler RAILS_ENV=production
 
@@ -42,7 +42,8 @@ you can do so by changing into your REDMINE_ROOT directory and issuing a command
 
 #### Mail reading
 
-The parameters for this job is exactly the same [as described here](http://www.redmine.org/projects/redmine/wiki/RedmineReceivingEmails) for rake task redmine:email:receive.
+The parameters for this job is exactly the same [as described here](http://www.redmine.org/projects/redmine/wiki/RedmineReceivingEmails)
+for rake task redmine\:email\:receive.
 
         read_mail:
           cron: "* * * * *"
