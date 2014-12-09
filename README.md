@@ -42,8 +42,8 @@ you can do so by changing into your REDMINE_ROOT directory and issuing a command
 
 #### Mail reading
 
-The parameters for this job is exactly the same [as described here](http://www.redmine.org/projects/redmine/wiki/RedmineReceivingEmails)
-for rake task redmine\:email\:receive.
+The parameters for this job is exactly the same as the normal Redmine rake task to receive emails with IMAP 
+[as described here](http://www.redmine.org/projects/redmine/wiki/RedmineReceivingEmails).
 
         read_mail:
           cron: "* * * * *"
