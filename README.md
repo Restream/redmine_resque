@@ -11,7 +11,7 @@ Link at the top menu allows administrator see what's up with your queue.
 
 ## Requirements
 
-Resque requires Redis
+Resque requires Redis.
 
 ## Install
 
@@ -22,7 +22,7 @@ you can do so by changing into your REDMINE_ROOT directory and issuing a command
         git clone https://github.com/Undev/redmine_resque.git plugins/redmine_resque
         bundle install
 
-2. Restart Redmine
+2. Restart Redmine.
 
 3. Run resque worker from REDMINE_ROOT directory or use a [Ubuntu/Debian upstart job](#ubuntu/debian-upstart-job).
 
@@ -40,7 +40,7 @@ you can do so by changing into your REDMINE_ROOT directory and issuing a command
 
 2. Add any of the items below to the schedule:
 
-### Mail reading
+#### Mail reading
 
 The parameters for this job is exactly the same [as described here](http://www.redmine.org/projects/redmine/wiki/RedmineReceivingEmails) for rake task redmine:email:receive.
 
