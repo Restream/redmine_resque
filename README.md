@@ -6,7 +6,7 @@
 This plugin adds a **resque** gem (https://github.com/resque/resque) and mounts the Resque front end on the "/resque" subpath.
 
 The plugin creates a top-menu Redmine link that allows the administrator to see what happens in the job queue.  
-![resque link](resque_1.png)
+![resque link](resque_1.PNG)
 
 ## Compatibility
 
