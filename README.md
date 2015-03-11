@@ -1,43 +1,67 @@
-# Redmine Resque plugin
+# Redmine Resque Plugin
 
 [![Build Status](https://travis-ci.org/Undev/redmine_resque.png?branch=master)](https://travis-ci.org/Undev/redmine_resque)
 [![Code Climate](https://codeclimate.com/github/Undev/redmine_resque.png)](https://codeclimate.com/github/Undev/redmine_resque)
 
-Adding "resque" gem and mount Resque front-end on a subpath "/resque".
+This plugin adds a **resque** gem (https://github.com/resque/resque) and mounts the Resque front end on the "/resque" subpath.
 
-## Description
+The plugin creates a top-menu Redmine link that allows the administrator to see what happens in the job queue.  
+![resque link](resque_1.png)
 
-Link at the top menu allows administrator see what's up with your queue.
+## Compatibility
 
-## Requirements
+This plugin version is compatible only with Redmine 2.1.x and later.
 
-Resque requires Redis
+## Installation
 
-## Install
+1. To install the plugin
+    * Download the .ZIP archive, extract files and copy the plugin directory into #{REDMINE_ROOT}/plugins.
+    
+    Or
 
-1. Copy plugin directory into REDMINE_ROOT/plugins.
-If you are downloading the plugin directly from GitHub,
-you can do so by changing into your REDMINE_ROOT directory and issuing a command like
+    * Change you current directory to your Redmine root directory:  
 
-        git clone https://github.com/Undev/redmine_resque.git plugins/redmine_resque
-        bundle install
+            cd {REDMINE_ROOT}
+            
+      Copy the plugin from GitHub using the following commands:
+      
+            git clone https://github.com/Undev/redmine_resque.git plugins/redmine_resque
+            
+2. Install the required gems using the command:  
 
-2. Restart Redmine
-3. Run resque worker from REDMINE_ROOT directory
+        bundle install  
+
+    * In case of bundle install errors, remove the Gemfile.lock file, update the local package index and install the required dependencies. Then execute the bundle install command again:  
+
+            rm Gemfile.lock
+            sudo apt-get update
+            sudo apt-get install -y libxml2-dev libxslt-dev libpq-dev
+            bundle install
+            
+3. Restart Redmine.
+
+4. Run resque worker from REDMINE_ROOT directory
 
         bundle exec rake resque:work RAILS_ENV=production QUEUE=*
 
-## Links
+Now you should be able to see the plugin in **Administration > Plugins**.
 
-- http://www.redmine.org/
-- https://github.com/resque/resque
+## Usage
+
+This plugin is used by other Redmine plugins, for example, [Redmine Elastic Search Plugin](https://github.com/Undev/redmine_elasticsearch).
 
 ## License
 
-Copyright (C) 2014 Undev.ru
+Copyright (c) 2015 Undev
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+http://www.apache.org/licenses/LICENSE-2.0
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
