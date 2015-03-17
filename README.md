@@ -7,6 +7,7 @@ This plugin adds a **resque** gem (https://github.com/resque/resque) and mounts 
 
 The plugin creates a top-menu Redmine link that allows the administrator to see what happens in the job queue.  
 ![resque link](resque_1.PNG)
+![job queue](resque_2.PNG)
 
 ## Compatibility
 
@@ -14,7 +15,9 @@ This plugin version is compatible only with Redmine 2.1.x and later.
 
 ## Installation
 
-1. To install the plugin
+1. This plugin requires Redis. Install and run the Redis service before you proceed.
+
+2. To install the plugin
     * Download the .ZIP archive, extract files and copy the plugin directory into #{REDMINE_ROOT}/plugins.
     
     Or
@@ -27,9 +30,9 @@ This plugin version is compatible only with Redmine 2.1.x and later.
       
             git clone https://github.com/Undev/redmine_resque.git plugins/redmine_resque
             
-2. Install the required gems using the command:  
+3. Install the required gems using the command:  
 
-        bundle install  
+        bundle install
 
     * In case of bundle install errors, remove the Gemfile.lock file, update the local package index and install the required dependencies. Then execute the bundle install command again:  
 
@@ -38,9 +41,9 @@ This plugin version is compatible only with Redmine 2.1.x and later.
             sudo apt-get install -y libxml2-dev libxslt-dev libpq-dev
             bundle install
             
-3. Restart Redmine.
+4. Restart Redmine.
 
-4. Run resque worker from REDMINE_ROOT directory
+5. Run resque worker from REDMINE_ROOT directory
 
         bundle exec rake resque:work RAILS_ENV=production QUEUE=*
 
