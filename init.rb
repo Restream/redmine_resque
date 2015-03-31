@@ -15,10 +15,11 @@ Redmine::Plugin.register :redmine_resque do
   name        'Resque for Redmine'
   description 'Background jobs for Redmine'
   author      'Undev'
-  version     '0.0.3'
+  version     '0.0.4'
   url         'https://github.com/Undev/redmine_resque'
 
   requires_redmine :version_or_higher => '2.1'
 
-  menu :top_menu, 'Resque', 'resque', :if => Proc.new { User.current.admin? }
+  menu :top_menu, 'Resque', :resque_path, :if => Proc.new { User.current.admin? }
 end
+
