@@ -43,7 +43,7 @@ This plugin version is compatible only with Redmine 2.1.x and later.
             
 4. Restart Redmine.
 
-5. Run resque worker from REDMINE_ROOT directory
+5. Run a Resque worker from the REDMINE_ROOT directory:
 
         bundle exec rake resque:work RAILS_ENV=production QUEUE=*
 
