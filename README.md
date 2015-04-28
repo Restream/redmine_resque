@@ -79,23 +79,23 @@ The parameters for this job are exactly the same as the normal Redmine rake task
 
 ## Ubuntu/Debian upstart job
 
-1. Copy the example upstart config files provided by this plugin to the system directory:
+1. Copy the example upstart configuration files provided by this plugin to the system directory:
 
         cp script/redmine_*.conf /etc/init
 
-2. Edit the config files and scripts to reflect the correct system user and Redmine installation path.
+2. Edit the configuration files and scripts to reflect the correct system user and Redmine installation path.
 
         nano script/redmine_scheduler.sh
         nano script/redmine_worker.sh
         nano /etc/init/redmine_scheduler.conf
         nano /etc/init/redmine_worker.conf
 
-3. Start or stop the scheduler and worker.
+3. Start or stop the scheduler and the worker.
 
         service redmine_scheduler start
         service redmine_worker start
 
-4. If you want non-root users to stop/start service, add them to the sudoers file:
+4. If you want non-root users to be able to stop/start the service, add them to the sudoers file:
 
         nano /etc/sudoers
         
