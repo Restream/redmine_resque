@@ -12,8 +12,8 @@ ActionDispatch::Callbacks.to_prepare do
 end
 
 Redmine::Plugin.register :redmine_resque do
-  name        'Resque for Redmine'
-  description 'Background jobs for Redmine'
+  name        'Redmine Resque Plugin'
+  description 'This plugin adds the Resque gem for managing background jobs in Redmine.'
   author      'Undev'
   version     '0.0.4'
   url         'https://github.com/Undev/redmine_resque'
