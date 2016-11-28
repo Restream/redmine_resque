@@ -1,6 +1,6 @@
 require File.expand_path('../../test_helper', __FILE__)
 
-class ResqueTest < ActionController::IntegrationTest
+class ResqueTest < Redmine::IntegrationTest
   fixtures :enumerations, :users, :email_addresses,
     :roles,
     :member_roles,
