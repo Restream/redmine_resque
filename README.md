@@ -1,7 +1,7 @@
 # Redmine Resque Plugin
 
-[![Build Status](https://travis-ci.org/Restream/redmine_resque.png?branch=master)](https://travis-ci.org/Restream/redmine_resque)
-[![Code Climate](https://codeclimate.com/github/Restream/redmine_resque.png)](https://codeclimate.com/github/Restream/redmine_resque)
+[![Build Status](https://travis-ci.org/Restream/redmine_resque.svg?branch=master)](https://travis-ci.org/Restream/redmine_resque)
+[![Code Climate](https://codeclimate.com/github/Restream/redmine_resque/badges/gpa.svg)](https://codeclimate.com/github/Restream/redmine_resque)
 
 This plugin adds **resque** and **resque-scheduler** gems (https://github.com/resque/resque) and mounts the Resque front end on the "/resque" subpath.
 
