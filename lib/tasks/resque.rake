@@ -8,7 +8,7 @@ namespace :resque do
     require 'resque'
     require 'resque-scheduler'
 
-    ENV['QUEUE'] = '*' if ENV['QUEUE'].blank?
+    ENV['QUEUE']       = '*' if ENV['QUEUE'].blank?
     Resque.before_fork = Proc.new { ActiveRecord::Base.establish_connection }
   end
 end

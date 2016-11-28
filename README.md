@@ -1,13 +1,13 @@
 # Redmine Resque Plugin
 
-[![Build Status](https://travis-ci.org/Undev/redmine_resque.png?branch=master)](https://travis-ci.org/Undev/redmine_resque)
-[![Code Climate](https://codeclimate.com/github/Undev/redmine_resque.png)](https://codeclimate.com/github/Undev/redmine_resque)
+[![Build Status](https://travis-ci.org/Restream/redmine_resque.png?branch=master)](https://travis-ci.org/Restream/redmine_resque)
+[![Code Climate](https://codeclimate.com/github/Restream/redmine_resque.png)](https://codeclimate.com/github/Restream/redmine_resque)
 
 This plugin adds **resque** and **resque-scheduler** gems (https://github.com/resque/resque) and mounts the Resque front end on the "/resque" subpath.
 
 The plugin creates a top-menu Redmine link that allows the administrator to see what happens in the job queue.  
-![resque link](resque_1.PNG)
-![job queue](resque_2.PNG)
+![resque link](doc/resque_1.png)
+![job queue](doc/resque_2.png)
 
 ## Compatibility
 
@@ -28,7 +28,7 @@ This plugin version is compatible only with Redmine 2.1.x and later.
             
       Copy the plugin from GitHub using the following commands:
       
-            git clone https://github.com/Undev/redmine_resque.git plugins/redmine_resque
+            git clone https://github.com/Restream/redmine_resque.git plugins/redmine_resque
             
 3. Install the required gems using the command:  
 
@@ -105,7 +105,7 @@ The parameters for this job are exactly the same as the normal Redmine rake task
 
 ## Usage
 
-This plugin is used by other Redmine plugins, for example, [Redmine Elastic Search Plugin](https://github.com/Undev/redmine_elasticsearch).
+This plugin is used by other Redmine plugins, for example, [Redmine Elastic Search Plugin](https://github.com/Restream/redmine_elasticsearch).
 
 ## Maintainers
 
@@ -113,7 +113,7 @@ Danil Tashkinov, [github.com/nodecarter](https://github.com/nodecarter)
 
 ## License
 
-Copyright (c) 2015 Undev
+Copyright (c) 2016 Restream
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

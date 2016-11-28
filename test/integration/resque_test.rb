@@ -1,11 +1,11 @@
 require File.expand_path('../../test_helper', __FILE__)
 
 class ResqueTest < ActionController::IntegrationTest
-  fixtures :enumerations, :users,
-           :roles,
-           :member_roles,
-           :members,
-           :enabled_modules
+  fixtures :enumerations, :users, :email_addresses,
+    :roles,
+    :member_roles,
+    :members,
+    :enabled_modules
 
   def test_admin_can_open_resque_ui
     log_user('admin', 'admin')
